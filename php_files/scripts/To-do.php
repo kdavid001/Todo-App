@@ -12,12 +12,9 @@ include("../db/connect.php");
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TO DO LIST</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"> -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
-    <!-- Include jQuery from a CDN -->
 
 
 
@@ -31,7 +28,6 @@ include("../db/connect.php");
 
                                 <h1 class="card-title">TO-DO LIST</h1>
 
-                                <!-- <button class="log_out_btn" type="submit" method="POST">Log Out</button> -->
                                 <button class="Btn" onclick="redirect()">
                                     <div class="sign">
                                         <svg viewBox="0 0 512 512">
@@ -42,7 +38,6 @@ include("../db/connect.php");
 
                                     <div class="text">Logout</div>
                                 </button>
-                                <!-- <a class="logout_btn" href="log_out.php">logout</a> -->
                                 <?php
                                 echo "<h2>Welcome, " . $_SESSION["user_name"] . "</h2>";
                                 ?>
@@ -67,7 +62,6 @@ include("../db/connect.php");
         </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="../styles/js_file/index.js" charset="utf-8"></script> -->
     <link rel="stylesheet" href="../styles/to-do.css">
 
 
@@ -78,10 +72,8 @@ include("../db/connect.php");
                 url: 'load-data.php',
                 success: function(data) {
                     data = JSON.parse(data);
-                    // console.log(data);
 
                     data.forEach(element => {
-                        // console.log(element);
                         var color = "red";
                         if (element.id % 2 == 0) {
                             color = "green";
