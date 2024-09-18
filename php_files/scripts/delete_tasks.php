@@ -8,6 +8,3 @@ if (isset($_GET['id'])) {
     header("Location: ../scripts/To-do.php");
 }
 
-// echo"5";
-// echo"6"; 
-// echo"7";
