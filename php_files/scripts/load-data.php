@@ -12,7 +12,6 @@ include("../db/connect.php");
     while($task = mysqli_fetch_assoc($result)){
         array_push($tasks, $task);
     }
-    // var_dump($tasks);
     echo json_encode($tasks)
 
 
